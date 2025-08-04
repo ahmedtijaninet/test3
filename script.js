@@ -135,38 +135,24 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         const totalSlides = slides.length;
 
-        // Function to determine how many slides are visible
         const getVisibleSlides = () => {
-            if (window.innerWidth <= 768) {
-                return 1;
-            } else {
-                // On larger screens, we show 3 slides but the container
-                // is sized to show them all, so we don't need to slide.
-                // However, to keep logic simple, we can say 3 are visible.
-                // The key is that we only slide on mobile.
-                // Let's adjust the logic to only slide when needed.
-                return 3;
-            }
+            return window.innerWidth <= 768 ? 1 : 3;
         };
 
         const updateSliderPosition = () => {
             const slideWidth = slides[0].getBoundingClientRect().width;
             const newTransform = -currentIndex * slideWidth;
 
-            // Apply transform only on mobile
             if (window.innerWidth <= 768) {
                  sliderContainer.style.transform = `translateX(${newTransform}px)`;
             } else {
-                // On desktop, remove any transform to show all 3
                 sliderContainer.style.transform = `translateX(0px)`;
             }
 
-            // Disable/Enable buttons
             const visibleSlides = getVisibleSlides();
             prevButton.disabled = currentIndex === 0;
             nextButton.disabled = currentIndex >= totalSlides - visibleSlides;
 
-            // Hide buttons on desktop since no sliding is needed
             if (window.innerWidth > 768) {
                 prevButton.style.display = 'none';
                 nextButton.style.display = 'none';
@@ -191,14 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update on window resize
         window.addEventListener('resize', () => {
-            // Reset index on resize to avoid weird states
             currentIndex = 0;
             updateSliderPosition();
         });
 
-        // Initial setup
         updateSliderPosition();
     }
 });

@@ -198,7 +198,7 @@ section {
 .poles-slider {
     width: 100%;
     max-width: 900px;
-    margin: 2rem 0;
+    margin-bottom: 2rem; /* Space between slider and H1 */
     position: relative;
 }
 
@@ -215,51 +215,33 @@ section {
 }
 
 .poles-slider .pole-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: var(--text-color-dark);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-color-light);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: background-color 0.3s ease;
-}
-
-.poles-slider .pole-card:hover {
-    background-color: white;
+    backdrop-filter: blur(5px);
 }
 
 .poles-slider .card-icon {
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */ /* Let's use white for better contrast */
+    color: white;
     margin-bottom: 1rem;
 }
 
 .poles-slider .pole-card h3 {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: white;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .poles-slider .pole-card p {
     font-size: 0.9rem;
-    flex-grow: 1;
-    margin: 0.5rem 0 1rem;
-}
-
-.poles-slider .pole-card .btn-outline {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    align-self: center;
-    padding: 0.5rem 1.5rem;
-}
-
-.poles-slider .pole-card .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: white;
+    line-height: 1.5;
 }
 
 .poles-slider .slider-btn {
