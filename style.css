@@ -145,12 +145,13 @@ section {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .hero-section .subtitle {
     font-size: 1.3rem;
     font-weight: 300;
+    margin-top: 2.5rem;
     margin-bottom: 2.5rem;
 }
 
@@ -198,7 +199,7 @@ section {
 .poles-slider {
     width: 100%;
     max-width: 900px;
-    margin: 2rem 0;
+    margin: 0;
     position: relative;
 }
 
