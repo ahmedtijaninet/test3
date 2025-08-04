@@ -17,11 +17,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="mobile-nav-toggle" aria-controls="sidebar-nav" aria-expanded="false">
+    <div id="preloader">
+        <img src="SELYN.svg" alt="SELYN Logo" class="preloader-logo">
+    </div>
+
+    <button class="mobile-nav-toggle preloader-hidden" aria-controls="sidebar-nav" aria-expanded="false">
         <i class="fas fa-bars" aria-hidden="true"></i>
         <span class="sr-only">Menu</span>
     </button>
-    <nav class="sidebar-nav" id="sidebar-nav">
+    <nav class="sidebar-nav preloader-hidden" id="sidebar-nav">
         <div class="logo">
             <a href="index.html">
                 <img src="SELYN.svg" alt="SELYN Logo" class="logo-svg">
@@ -48,7 +52,7 @@
         </button>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content preloader-hidden">
         <!-- ================== -->
         <!--     Hero Section     -->
         <!-- ================== -->
@@ -259,7 +263,7 @@
     <!-- ===================== -->
     <!--        Footer         -->
     <!-- ===================== -->
-    <footer id="contact" class="site-footer">
+    <footer id="contact" class="site-footer preloader-hidden">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column about">

@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preloader Logic
+    const preloader = document.getElementById('preloader');
+    const contentToHide = document.querySelectorAll('.preloader-hidden');
+
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('preloader-fade-out');
+            preloader.addEventListener('transitionend', () => {
+                preloader.classList.add('preloader-hidden');
+                contentToHide.forEach(el => {
+                    el.classList.remove('preloader-hidden');
+                });
+            });
+        }, 5000); // 5 seconds
+    }
+
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const sidebarNav = document.querySelector('.sidebar-nav');
     const icon = mobileNavToggle.querySelector('i');
