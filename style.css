@@ -196,6 +196,10 @@ section {
     gap: 2rem;
 }
 
+.poles-grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* Poles Slider in Hero */
 .hero-content {
     display: flex;
@@ -299,6 +303,16 @@ section {
     }
     .poles-slider .slider-btn.next {
         right: -20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
     }
 }
 
