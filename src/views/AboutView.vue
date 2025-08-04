@@ -1,0 +1,95 @@
+<template>
+  <div>
+    <!-- =================== -->
+    <!--    About Hero       -->
+    <!-- =================== -->
+    <section class="hero-section page-hero">
+      <div class="hero-content">
+        <h1>Notre Histoire, Vos Ambitions.</h1>
+        <p class="subtitle">
+          Découvrez qui nous sommes, notre mission et notre engagement pour
+          votre succès.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!--   Story Section     -->
+    <!-- =================== -->
+    <section class="story-section">
+      <div class="container small-container">
+        <h2 class="section-title">L'Aventure SELYN</h2>
+        <p class="text-center">
+          Née d'une vision simple - simplifier l'entrepreneuriat - SELYN a été
+          fondée en 2020 par deux experts passionnés. Notre mission est de
+          fournir un écosystème intégré où le conseil, le digital et l'humain
+          convergent pour créer un environnement propice à la croissance et à
+          l'innovation.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!--  Timeline Section   -->
+    <!-- =================== -->
+    <section class="timeline-section">
+      <div class="container">
+        <h2 class="section-title">Notre Évolution</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2020 - La Naissance</h3>
+              <p>Création de SELYN avec le pôle consulting.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2021 - L'Expansion</h3>
+              <p>Ouverture de l'espace de coworking.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>2023 - L'Innovation</h3>
+              <p>Lancement de la Super App SELYN Suite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!--  Founders Section   -->
+    <!-- =================== -->
+    <section class="founders-section team-section">
+      <div class="container">
+        <h2 class="section-title">Les Fondateurs</h2>
+        <div class="team-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <div class="team-member">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Fondatrice" />
+            <h4>Alice Martin</h4>
+            <p>CEO & Co-Fondatrice</p>
+          </div>
+          <div class="team-member">
+            <img src="https://i.pravatar.cc/150?img=4" alt="Fondateur" />
+            <h4>Karim Bennani</h4>
+            <p>CTO & Co-Fondateur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AboutView",
+};
+</script>
+
+<style scoped>
+/* Scoped styles for the about page can go here */
+</style>

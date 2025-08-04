@@ -1,36 +1,29 @@
-# SELYN Business Center
+# vue-project
 
-SELYN is a business center that provides an integrated ecosystem for businesses to grow. It offers strategic consulting, a comprehensive software suite, and a modern co-working space.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Services
+## Recommended IDE Setup
 
-### Selyn Conseil
-Strategic consulting services to help businesses with:
-- Project studies and setup
-- Optimization and financing
-- Digital transformation
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-### Selyn Suite
-A comprehensive software suite to manage all aspects of your business, including:
-- Finance and ERP
-- HR and Payroll
-- CRM and Sales
+## Customize configuration
 
-### Selyn Space
-A modern and connected co-working space with the following features:
-- High-speed fiber optic internet
-- Unlimited coffee
-- Video conference booths
-- A dynamic community of entrepreneurs
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Mission and Vision
+## Project Setup
 
-**Mission:** To provide an integrated ecosystem that simplifies entrepreneurship and accelerates business growth through intelligent solutions and a collaborative environment.
+```sh
+npm install
+```
 
-**Vision:** To become the strategic partner of choice for companies seeking digital transformation, operational excellence, and sustainable innovation.
+### Compile and Hot-Reload for Development
 
-## Contact
+```sh
+npm run dev
+```
 
-- **Phone:** +212 5 00 00 00 00
-- **Email:** contact@selyn-bc.com
-- **Address:** 123 Rue de l'Innovation, Casablanca, Morocco
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
