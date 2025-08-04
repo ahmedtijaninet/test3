@@ -574,9 +574,22 @@ section {
 /*        Footer       */
 /* ------------------- */
 .site-footer {
-    background-color: var(--primary-color);
+    position: relative;
     color: rgba(255, 255, 255, 0.8);
-    padding: 4rem 0 0;
+    padding: 6rem 0 2rem; /* Adjusted padding for skew */
+    overflow: hidden; /* Hide overflowing skewed background */
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: skewY(-3deg);
+    z-index: 0;
 }
 
 .footer-grid {
@@ -584,6 +597,8 @@ section {
     grid-template-columns: 2fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .logo-svg-footer {
@@ -638,6 +653,7 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 #layout-toggle {
