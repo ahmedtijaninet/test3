@@ -282,6 +282,26 @@ section {
     line-height: 1.5;
 }
 
+/* Add colors to slider cards */
+.poles-slider .pole-conseil .pole-card {
+    background-color: rgba(74, 93, 35, 0.25);
+}
+.poles-slider .pole-conseil .card-icon {
+    color: var(--conseil-color-light);
+}
+.poles-slider .pole-suite .pole-card {
+    background-color: rgba(76, 58, 122, 0.25);
+}
+.poles-slider .pole-suite .card-icon {
+    color: var(--suite-color-light);
+}
+.poles-slider .pole-space .pole-card {
+    background-color: rgba(217, 119, 6, 0.25);
+}
+.poles-slider .pole-space .card-icon {
+    color: var(--space-color-light);
+}
+
 .poles-slider .slider-btn {
     position: absolute;
     top: 50%;
