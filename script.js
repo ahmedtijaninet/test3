@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const polesSlider = document.getElementById('poles-slider');
     if (polesSlider) {
         const sliderContainer = polesSlider.querySelector('.slider-container');
-        const slides = polesSlider.querySelectorAll('.pole-slide');
+        const slides = polesSlider.querySelectorAll('.pole-slide-link');
         const prevButton = polesSlider.querySelector('.slider-btn.prev');
         const nextButton = polesSlider.querySelector('.slider-btn.next');
 

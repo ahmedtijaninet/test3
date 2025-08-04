@@ -296,7 +296,7 @@ section {
 }
 
 @media (max-width: 768px) {
-    .poles-slider .pole-slide {
+    .poles-slider .pole-slide-link {
         flex: 0 0 100%;
     }
     .poles-slider .slider-btn {
