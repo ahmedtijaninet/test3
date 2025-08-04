@@ -189,6 +189,13 @@ section {
     border-color: var(--secondary-color);
 }
 
+/* Generic Poles Section */
+.poles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 /* Poles Slider in Hero */
 .hero-content {
     display: flex;
