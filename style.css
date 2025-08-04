@@ -1112,6 +1112,27 @@ body.horizontal-layout .mobile-nav-toggle {
     margin-bottom: 1rem;
 }
 
+/* --- Themed Nav and Footer --- */
+.page-consulting .sidebar-nav, .page-consulting .site-footer { background-color: var(--conseil-color); }
+.page-suite .sidebar-nav, .page-suite .site-footer { background-color: var(--suite-color); }
+.page-space .sidebar-nav, .page-space .site-footer { background-color: var(--space-color); }
+.page-communaute .sidebar-nav, .page-communaute .site-footer { background-color: var(--communaute-color); }
+.page-offres .sidebar-nav, .page-offres .site-footer { background-color: var(--offres-color); }
+
+.page-consulting .sidebar-nav ul li a:hover,
+.page-suite .sidebar-nav ul li a:hover,
+.page-space .sidebar-nav ul li a:hover,
+.page-communaute .sidebar-nav ul li a:hover,
+.page-offres .sidebar-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-consulting .sidebar-nav ul li.active a { background-color: var(--conseil-color-dark); }
+.page-suite .sidebar-nav ul li.active a { background-color: var(--suite-color-dark); }
+.page-space .sidebar-nav ul li.active a { background-color: var(--space-color-dark); }
+.page-communaute .sidebar-nav ul li.active a { background-color: var(--communaute-color-dark); }
+.page-offres .sidebar-nav ul li.active a { background-color: var(--offres-color-dark); }
+
 /* ------------------- */
 /* Selyn Conseil Page  */
 /* ------------------- */
