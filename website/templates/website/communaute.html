@@ -1,0 +1,109 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Communauté | SELYN Business Center{% endblock %}
+
+{% block content %}
+<!-- =================== -->
+<!--   Community Hero    -->
+<!-- =================== -->
+<section class="hero-section page-hero" style="background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1771&q=80');">
+    <div class="hero-content">
+        <h1>Rejoignez un écosystème qui propulse le vôtre.</h1>
+        <p class="subtitle">Connectez-vous, collaborez et grandissez avec une communauté d'entrepreneurs passionnés.</p>
+    </div>
+</section>
+
+<!-- =================== -->
+<!--   Social Wall       -->
+<!-- =================== -->
+<section class="social-wall-section">
+    <div class="container">
+        <h2 class="section-title">Le Pouls de la Communauté</h2>
+        <div class="social-wall-grid">
+            <div class="social-post-card">
+                <div class="post-header">
+                    <img src="https://i.pravatar.cc/40?img=7" alt="User">
+                    <span><strong>Leo Dubois</strong> @leodubois</span>
+                </div>
+                <p class="post-content">Super Masterclass sur le financement hier soir ! Merci SELYN pour l'organisation. #startup #funding</p>
+            </div>
+            <div class="social-post-card">
+                <div class="post-header">
+                    <img src="https://i.pravatar.cc/40?img=8" alt="User">
+                    <span><strong>Ines Benali</strong> @inesdev</span>
+                </div>
+                <p class="post-content">À la recherche d'un dev front-end pour une mission freelance. DM si intéressé(e) ! #react #jobs</p>
+            </div>
+            <div class="social-post-card">
+                <div class="post-header">
+                    <img src="https://i.pravatar.cc/40?img=9" alt="User">
+                    <span><strong>Crea'Zine</strong> @creazine</span>
+                </div>
+                <p class="post-content">Heureux de célébrer notre 1er anniversaire dans notre bureau privatif chez SELYN. L'aventure ne fait que commencer !</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =================== -->
+<!--    Events Section   -->
+<!-- =================== -->
+<section class="events-section-page">
+     <div class="container">
+        <h2 class="section-title">Nos Prochains Événements</h2>
+        <ul class="events-list">
+            <li class="event-item">
+                <div class="event-date"><span>25</span>AOÛ</div>
+                <div class="event-details">
+                    <h4>Masterclass : Financer son projet innovant</h4>
+                    <p>18:00 - Espace Conférence SELYN</p>
+                </div>
+                <a href="#" class="btn btn-outline">S'inscrire</a>
+            </li>
+            <li class="event-item">
+                <div class="event-date"><span>12</span>SEP</div>
+                <div class="event-details">
+                    <h4>Networking : La rencontre des entrepreneurs</h4>
+                    <p>19:00 - Rooftop SELYN</p>
+                </div>
+                <a href="#" class="btn btn-outline">Détails</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- =================== -->
+<!--      Map Section    -->
+<!-- =================== -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Un Réseau International</h2>
+        <div class="map-placeholder">
+            <img src="https://i.imgur.com/6C3oE2H.png" alt="Carte du réseau de membres SELYN">
+        </div>
+    </div>
+</section>
+
+<!-- =================== -->
+<!--   Join Us Section   -->
+<!-- =================== -->
+<section class="join-us-section why-choose-us-section">
+    <div class="container">
+        <h2 class="section-title">Devenez Membre</h2>
+        <div class="join-us-content">
+            <div class="join-us-text">
+                <h3>Prêt à faire partie de l'aventure ?</h3>
+                <p>Remplissez le formulaire pour recevoir plus d'informations sur nos offres communautaires, nos événements exclusifs et comment nous pouvons vous aider à atteindre vos objectifs.</p>
+            </div>
+            <form class="join-us-form">
+                <label for="join-name" class="sr-only">Votre nom</label>
+                <input type="text" id="join-name" placeholder="Votre nom" required>
+                <label for="join-email" class="sr-only">Votre e-mail</label>
+                <input type="email" id="join-email" placeholder="Votre e-mail" required>
+                <button type="submit" class="btn btn-secondary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

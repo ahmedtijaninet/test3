@@ -1,0 +1,210 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ================== -->
+<!--     Hero Section     -->
+<!-- ================== -->
+<section id="accueil" class="hero-section">
+    <div class="hero-content">
+        <h1>Une transformation globale, portée par l’intelligence, l’expertise et l’espace.</h1>
+
+        <!-- Poles Slider -->
+        <div id="poles-slider" class="poles-slider">
+            <div class="slider-container">
+                <!-- Slide 1: Consulting -->
+                <a href="{% url 'website:consulting' %}" class="pole-slide-link pole-conseil">
+                    <div class="pole-slide">
+                        <div class="pole-card">
+                            <i class="fas fa-briefcase card-icon"></i>
+                            <h3>Selyn Conseil</h3>
+                            <p>Un accompagnement stratégique complet pour transformer vos ambitions en succès.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Slide 2: SELYN Suite -->
+                <a href="{% url 'website:suite' %}" class="pole-slide-link pole-suite">
+                    <div class="pole-slide">
+                        <div class="pole-card">
+                            <i class="fas fa-rocket card-icon"></i>
+                            <h3>Selyn Suite</h3>
+                            <p>Pilotez toute votre entreprise depuis une seule plateforme évolutive et intelligente.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Slide 3: Coworking -->
+                <a href="{% url 'website:coworking' %}" class="pole-slide-link pole-space">
+                    <div class="pole-slide">
+                        <div class="pole-card">
+                            <i class="fas fa-users card-icon"></i>
+                            <h3>Selyn Space</h3>
+                            <p>Un environnement de travail moderne et connecté pour inspirer l'innovation.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <p class="subtitle">Découvrez un écosystème connecté où vos idées prennent vie.</p>
+    </div>
+</section>
+
+<!-- ===================== -->
+<!--   Pricing Section     -->
+<!-- ===================== -->
+<section id="offres" class="pricing-section">
+    <div class="container">
+        <h2 class="section-title">Offres & Tarifs</h2>
+        <div class="pricing-grid">
+            <!-- Pricing Card 0: Gratuit -->
+            <div class="pricing-card fade-in-element">
+                <h3>Panier 0 (Gratuit)</h3>
+                <div class="price">0.00 <span>DH</span></div>
+                <p class="period">Découverte</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1ère consultation gratuite</li>
+                    <li><i class="fas fa-check"></i> 1 module SELYN Suite (1 mois)</li>
+                    <li><i class="fas fa-check"></i> 1h/semaine de coworking</li>
+                    <li><i class="fas fa-check"></i> Profil publié 15 jours</li>
+                    <li><i class="fas fa-check"></i> Participation aux événements</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Commencer</a>
+            </div>
+            <!-- Pricing Card 1: Populaire -->
+            <div class="pricing-card popular fade-in-element">
+                <div class="popular-badge">Populaire</div>
+                <h3>Panier 1</h3>
+                <div class="price">3 000 <span>DH HT / Mois</span></div>
+                <p class="period">Accompagnement Continu</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Gestion de projet, RH, pré-comptabilité</li>
+                    <li><i class="fas fa-check"></i> Modules SELYN Suite (compta, tréso)</li>
+                    <li><i class="fas fa-check"></i> Coworking quotidien</li>
+                    <li><i class="fas fa-check"></i> Salle de réunion 1h/semaine</li>
+                    <li><i class="fas fa-check"></i> Services de secrétariat</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Choisir cette offre</a>
+            </div>
+            <!-- Pricing Card 2: Personnalisé -->
+            <div class="pricing-card fade-in-element">
+                <h3>Panier 2 (Personnalisé)</h3>
+                <div class="price">10 000 <span>DH HT / Trimestre</span></div>
+                <p class="period">Solution Complète</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Étude et suivi de projets</li>
+                    <li><i class="fas fa-check"></i> RH, optimisation, modules avancés</li>
+                    <li><i class="fas fa-check"></i> Accès coworking 2 pers.</li>
+                    <li><i class="fas fa-check"></i> Salle de réunion 3h/semaine</li>
+                    <li><i class="fas fa-check"></i> Secrétariat inclus</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Nous Contacter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================== -->
+<!--   Community Section      -->
+<!-- ======================== -->
+<section id="communaute" class="community-section">
+    <div class="container">
+        <h2 class="section-title">Communauté</h2>
+
+        <!-- Testimonials -->
+        <div class="testimonials-grid">
+            <blockquote class="testimonial-card fade-in-element">
+                <img src="https://i.pravatar.cc/80?img=1" alt="Client 1">
+                <p>"L'accompagnement de SELYN a été un véritable accélérateur pour notre croissance. Une expertise rare."</p>
+                <footer>— Jean Dupont, CEO de TechCorp</footer>
+            </blockquote>
+            <blockquote class="testimonial-card fade-in-element">
+                <img src="https://i.pravatar.cc/80?img=2" alt="Client 2">
+                <p>"La flexibilité de l'espace de coworking et la puissance de SELYN Suite nous ont permis de nous structurer rapidement."</p>
+                <footer>— Fatima El Fassi, Fondatrice de Creative Minds</footer>
+            </blockquote>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mission-vision">
+            <div>
+                <h3>Notre Mission</h3>
+                <p>Fournir un écosystème intégré qui simplifie l'entrepreneuriat et accélère la croissance des entreprises grâce à des solutions intelligentes et un environnement collaboratif.</p>
+            </div>
+            <div>
+                <h3>Notre Vision</h3>
+                <p>Devenir le partenaire stratégique de référence pour les entreprises en quête de transformation digitale, d'excellence opérationnelle et d'innovation durable.</p>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter-signup">
+            <h3>Rejoignez notre communauté</h3>
+            <p>Recevez nos analyses, actualités et invitations exclusives en avant-première.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit" class="btn btn-secondary">S'inscrire</button>
+            </form>
+        </div>
+
+        <!-- Team -->
+        <div class="team-section">
+            <h3 class="subsection-title">Notre Équipe</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="Membre équipe 1">
+                    <h4>Alice Martin</h4>
+                    <p>CEO & Fondatrice</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=4" alt="Membre équipe 2">
+                    <h4>Karim Bennani</h4>
+                    <p>Directeur Technique (CTO)</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Membre équipe 3">
+                    <h4>Sofia Chen</h4>
+                    <p>Responsable Coworking</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners -->
+        <div class="partners-section">
+            <h3 class="subsection-title">Nos Partenaires Stratégiques</h3>
+            <div class="partners-logos">
+                <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=Partner+1" alt="Partner 1 Logo">
+                <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=Partner+2" alt="Partner 2 Logo">
+                <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=Partner+3" alt="Partner 3 Logo">
+                <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=Partner+4" alt="Partner 4 Logo">
+                <img src="https://via.placeholder.com/150x60/CCCCCC/FFFFFF?text=Partner+5" alt="Partner 5 Logo">
+            </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="events-section">
+            <h3 class="subsection-title">Événements à venir</h3>
+            <ul class="events-list">
+                <li class="event-item">
+                    <div class="event-date"><span>25</span>AOÛ</div>
+                    <div class="event-details">
+                        <h4>Masterclass : Financer son projet innovant</h4>
+                        <p>18:00 - Espace Conférence SELYN</p>
+                    </div>
+                    <a href="#" class="btn btn-outline">S'inscrire</a>
+                </li>
+                <li class="event-item">
+                    <div class="event-date"><span>12</span>SEP</div>
+                    <div class="event-details">
+                        <h4>Networking : La rencontre des entrepreneurs</h4>
+                        <p>19:00 - Rooftop SELYN</p>
+                    </div>
+                    <a href="#" class="btn btn-outline">Détails</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
