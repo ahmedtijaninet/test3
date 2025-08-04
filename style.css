@@ -135,7 +135,6 @@ section {
     color: var(--neutral-white);
     text-align: center;
     background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
-    position: relative;
 }
 
 .hero-content {
@@ -189,26 +188,24 @@ section {
     border-color: var(--secondary-color);
 }
 
-/* Poles Slider */
+/* Poles Slider in Hero */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .poles-slider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 2rem 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 900px;
+    margin: 2rem 0;
+    position: relative;
 }
 
 .poles-slider .slider-container {
     display: flex;
     overflow: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 50px; /* Space for buttons */
+    width: 100%;
 }
 
 .poles-slider .pole-slide {
@@ -221,35 +218,43 @@ section {
     background-color: rgba(255, 255, 255, 0.8);
     color: var(--text-color-dark);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-color 0.3s ease;
 }
 
 .poles-slider .pole-card:hover {
-    transform: translateY(-5px);
     background-color: white;
+}
+
+.poles-slider .card-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
 }
 
 .poles-slider .pole-card h3 {
     color: var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .poles-slider .pole-card p {
     font-size: 0.9rem;
     flex-grow: 1;
-    margin: 1rem 0;
+    margin: 0.5rem 0 1rem;
 }
 
 .poles-slider .pole-card .btn-outline {
     border-color: var(--primary-color);
     color: var(--primary-color);
     align-self: center;
+    padding: 0.5rem 1.5rem;
 }
 
 .poles-slider .pole-card .btn-outline:hover {
@@ -257,19 +262,13 @@ section {
     color: white;
 }
 
-.poles-slider .card-icon {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
 .poles-slider .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: var(--primary-color);
+    background: none;
+    border: 1px solid white;
+    color: white;
     font-size: 1.5rem;
     cursor: pointer;
     border-radius: 50%;
@@ -278,44 +277,43 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 10;
 }
 
 .poles-slider .slider-btn:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.poles-slider .slider-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 .poles-slider .slider-btn.prev {
-    left: 10px;
+    left: -50px;
 }
 
 .poles-slider .slider-btn.next {
-    right: 10px;
+    right: -50px;
 }
 
 @media (max-width: 1024px) {
-    .poles-slider .pole-slide {
-        flex: 0 0 50%;
+    .poles-slider .slider-btn.prev {
+        left: -20px;
+    }
+    .poles-slider .slider-btn.next {
+        right: -20px;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        min-height: 100vh; /* Ensure it still takes up height */
-        padding-bottom: 280px; /* Make space for the slider */
-    }
-    .poles-slider {
-        padding: 1rem 0;
-    }
-    .poles-slider .slider-container {
-        padding: 0 40px; /* Space for buttons */
-    }
     .poles-slider .pole-slide {
         flex: 0 0 100%;
     }
     .poles-slider .slider-btn {
-        width: 35px;
-        height: 35px;
+        background-color: rgba(0,0,0,0.2);
+        border-color: rgba(255,255,255,0.5);
     }
     .poles-slider .slider-btn.prev {
         left: 5px;

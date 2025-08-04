@@ -139,30 +139,41 @@ document.addEventListener('DOMContentLoaded', () => {
         const getVisibleSlides = () => {
             if (window.innerWidth <= 768) {
                 return 1;
-            } else if (window.innerWidth <= 1024) {
-                return 2;
             } else {
+                // On larger screens, we show 3 slides but the container
+                // is sized to show them all, so we don't need to slide.
+                // However, to keep logic simple, we can say 3 are visible.
+                // The key is that we only slide on mobile.
+                // Let's adjust the logic to only slide when needed.
                 return 3;
             }
         };
 
         const updateSliderPosition = () => {
-            const visibleSlides = getVisibleSlides();
-            // Ensure currentIndex does not go past the last possible slide group
-            if (currentIndex > totalSlides - visibleSlides) {
-                currentIndex = totalSlides - visibleSlides;
-            }
-            if (currentIndex < 0) {
-                currentIndex = 0;
-            }
-
-            const slideWidth = slides[0].offsetWidth;
+            const slideWidth = slides[0].getBoundingClientRect().width;
             const newTransform = -currentIndex * slideWidth;
-            sliderContainer.style.transform = `translateX(${newTransform}px)`;
+
+            // Apply transform only on mobile
+            if (window.innerWidth <= 768) {
+                 sliderContainer.style.transform = `translateX(${newTransform}px)`;
+            } else {
+                // On desktop, remove any transform to show all 3
+                sliderContainer.style.transform = `translateX(0px)`;
+            }
 
             // Disable/Enable buttons
+            const visibleSlides = getVisibleSlides();
             prevButton.disabled = currentIndex === 0;
             nextButton.disabled = currentIndex >= totalSlides - visibleSlides;
+
+            // Hide buttons on desktop since no sliding is needed
+            if (window.innerWidth > 768) {
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            } else {
+                prevButton.style.display = 'flex';
+                nextButton.style.display = 'flex';
+            }
         };
 
         nextButton.addEventListener('click', () => {
@@ -181,7 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Update on window resize
-        window.addEventListener('resize', updateSliderPosition);
+        window.addEventListener('resize', () => {
+            // Reset index on resize to avoid weird states
+            currentIndex = 0;
+            updateSliderPosition();
+        });
 
         // Initial setup
         updateSliderPosition();
