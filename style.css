@@ -135,7 +135,6 @@ section {
     color: var(--neutral-white);
     text-align: center;
     background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover;
-    position: relative;
 }
 
 .hero-content {
@@ -189,142 +188,6 @@ section {
     border-color: var(--secondary-color);
 }
 
-/* Poles Slider */
-.poles-slider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.poles-slider .slider-container {
-    display: flex;
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 50px; /* Space for buttons */
-}
-
-.poles-slider .pole-slide {
-    flex: 0 0 33.333%;
-    transition: transform 0.5s ease-in-out;
-    padding: 0 1rem;
-}
-
-.poles-slider .pole-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: var(--text-color-dark);
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.poles-slider .pole-card:hover {
-    transform: translateY(-5px);
-    background-color: white;
-}
-
-.poles-slider .pole-card h3 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-}
-
-.poles-slider .pole-card p {
-    font-size: 0.9rem;
-    flex-grow: 1;
-    margin: 1rem 0;
-}
-
-.poles-slider .pole-card .btn-outline {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    align-self: center;
-}
-
-.poles-slider .pole-card .btn-outline:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.poles-slider .card-icon {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-}
-
-.poles-slider .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.poles-slider .slider-btn:hover {
-    background-color: white;
-}
-
-.poles-slider .slider-btn.prev {
-    left: 10px;
-}
-
-.poles-slider .slider-btn.next {
-    right: 10px;
-}
-
-@media (max-width: 1024px) {
-    .poles-slider .pole-slide {
-        flex: 0 0 50%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: 100vh; /* Ensure it still takes up height */
-        padding-bottom: 280px; /* Make space for the slider */
-    }
-    .poles-slider {
-        padding: 1rem 0;
-    }
-    .poles-slider .slider-container {
-        padding: 0 40px; /* Space for buttons */
-    }
-    .poles-slider .pole-slide {
-        flex: 0 0 100%;
-    }
-    .poles-slider .slider-btn {
-        width: 35px;
-        height: 35px;
-    }
-    .poles-slider .slider-btn.prev {
-        left: 5px;
-    }
-    .poles-slider .slider-btn.next {
-        right: 5px;
-    }
-}
-
 /* ------------------- */
 /*   Generic Section   */
 /* ------------------- */
@@ -335,6 +198,75 @@ section {
     margin-bottom: 3rem;
 }
 
+/* ------------------- */
+/*    Poles Section    */
+/* ------------------- */
+.poles-section {
+    background-color: var(--neutral-light);
+}
+
+.poles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pole-card {
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pole-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.1);
+}
+
+.pole-card .card-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.pole-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.pole-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.pole-card .highlight {
+    font-style: italic;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.pole-card ul {
+    margin-top: 1.5rem;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.pole-card ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.pole-card ul li .fas {
+    color: var(--secondary-color);
+    margin-right: 0.75rem;
+    margin-top: 4px;
+}
 
 /* ------------------- */
 /*   Pricing Section   */
