@@ -8,6 +8,27 @@
     --neutral-white: #ffffff;
     --text-color-light: #ffffff;
     --text-color-dark: #333333;
+
+    /* Section-specific colors */
+    --conseil-color: #4A5D23;
+    --conseil-color-light: #6B7B4A;
+    --conseil-color-dark: #344118;
+
+    --suite-color: #4C3A7A;
+    --suite-color-light: #6D5B99;
+    --suite-color-dark: #352855;
+
+    --space-color: #D97706;
+    --space-color-light: #F59E0B;
+    --space-color-dark: #B45309;
+
+    --communaute-color: #9F1239;
+    --communaute-color-light: #BE185D;
+    --communaute-color-dark: #881337;
+
+    --offres-color: #14B8A6;
+    --offres-color-light: #2DD4BF;
+    --offres-color-dark: #0D9488;
 }
 
 *,
@@ -1069,6 +1090,147 @@ body.horizontal-layout .mobile-nav-toggle {
     font-size: 5rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
+}
+
+/* ------------------- */
+/* Selyn Conseil Page  */
+/* ------------------- */
+.page-consulting .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--conseil-color);
+}
+
+.page-consulting .btn-secondary {
+    background-color: var(--conseil-color);
+    border-color: var(--conseil-color);
+}
+
+.page-consulting .btn-secondary:hover {
+    background-color: var(--conseil-color-dark);
+    border-color: var(--conseil-color-dark);
+}
+
+.page-consulting .why-choose-us-section {
+    background-color: var(--conseil-color);
+}
+
+.page-consulting .why-choose-us-section .section-title {
+    color: var(--neutral-white);
+}
+
+.page-consulting .stat-item .stat-number {
+    color: var(--conseil-color-light);
+}
+
+/* ------------------- */
+/*  Selyn Suite Page   */
+/* ------------------- */
+.page-suite .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--suite-color);
+}
+
+.page-suite .btn-secondary {
+    background-color: var(--suite-color);
+    border-color: var(--suite-color);
+}
+
+.page-suite .btn-secondary:hover {
+    background-color: var(--suite-color-dark);
+    border-color: var(--suite-color-dark);
+}
+
+.page-suite .video-placeholder .far {
+    color: var(--suite-color);
+}
+
+.page-suite .comparison-table thead {
+    background-color: var(--suite-color);
+}
+
+/* ------------------- */
+/*  Selyn Space Page   */
+/* ------------------- */
+.page-space .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--space-color);
+}
+
+.page-space .btn-secondary {
+    background-color: var(--space-color);
+    border-color: var(--space-color);
+}
+
+.page-space .btn-secondary:hover {
+    background-color: var(--space-color-dark);
+    border-color: var(--space-color-dark);
+}
+
+.page-space .pricing-card.popular {
+    border-color: var(--space-color);
+}
+
+.page-space .popular-badge {
+    background-color: var(--space-color);
+}
+
+.page-space .pricing-card .period {
+    color: var(--space-color);
+}
+
+/* ------------------- */
+/*   Community Page    */
+/* ------------------- */
+.page-communaute .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--communaute-color);
+}
+
+.page-communaute .event-date {
+    background-color: var(--communaute-color);
+}
+
+.page-communaute .join-us-section {
+    background-color: var(--communaute-color);
+}
+
+.page-communaute .join-us-form .btn-secondary {
+    background-color: var(--neutral-white);
+    color: var(--communaute-color);
+    border-color: var(--neutral-white);
+}
+
+/* ------------------- */
+/* Offres & Tarifs Page */
+/* ------------------- */
+.page-offres .page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--offres-color);
+}
+
+.page-offres .pricing-card.popular {
+    border-color: var(--offres-color);
+}
+
+.page-offres .popular-badge {
+    background-color: var(--offres-color);
+}
+
+.page-offres .pricing-card .period {
+    color: var(--offres-color);
+}
+
+.page-offres .btn-secondary {
+    background-color: var(--offres-color);
+    border-color: var(--offres-color);
+}
+
+.page-offres .btn-secondary:hover {
+    background-color: var(--offres-color-dark);
+    border-color: var(--offres-color-dark);
+}
+
+.page-offres .why-choose-us-section {
+    background-color: var(--offres-color);
+}
+
+.page-offres .why-choose-us-stats .fas {
+    color: var(--offres-color-light);
 }
 
 /* ------------------- */
