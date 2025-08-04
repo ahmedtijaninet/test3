@@ -123,4 +123,67 @@ document.addEventListener('DOMContentLoaded', () => {
             horizontalNavToggle.setAttribute('aria-expanded', isVisible);
         });
     }
+
+    // Poles Slider Logic
+    const polesSlider = document.getElementById('poles-slider');
+    if (polesSlider) {
+        const sliderContainer = polesSlider.querySelector('.slider-container');
+        const slides = polesSlider.querySelectorAll('.pole-slide');
+        const prevButton = polesSlider.querySelector('.slider-btn.prev');
+        const nextButton = polesSlider.querySelector('.slider-btn.next');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Function to determine how many slides are visible
+        const getVisibleSlides = () => {
+            if (window.innerWidth <= 768) {
+                return 1;
+            } else if (window.innerWidth <= 1024) {
+                return 2;
+            } else {
+                return 3;
+            }
+        };
+
+        const updateSliderPosition = () => {
+            const visibleSlides = getVisibleSlides();
+            // Ensure currentIndex does not go past the last possible slide group
+            if (currentIndex > totalSlides - visibleSlides) {
+                currentIndex = totalSlides - visibleSlides;
+            }
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+
+            const slideWidth = slides[0].offsetWidth;
+            const newTransform = -currentIndex * slideWidth;
+            sliderContainer.style.transform = `translateX(${newTransform}px)`;
+
+            // Disable/Enable buttons
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex >= totalSlides - visibleSlides;
+        };
+
+        nextButton.addEventListener('click', () => {
+            const visibleSlides = getVisibleSlides();
+            if (currentIndex < totalSlides - visibleSlides) {
+                currentIndex++;
+                updateSliderPosition();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSliderPosition();
+            }
+        });
+
+        // Update on window resize
+        window.addEventListener('resize', updateSliderPosition);
+
+        // Initial setup
+        updateSliderPosition();
+    }
 });
