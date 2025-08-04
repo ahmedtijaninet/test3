@@ -209,10 +209,17 @@ section {
     width: 100%;
 }
 
-.poles-slider .pole-slide {
+.poles-slider .pole-slide-link {
     flex: 0 0 33.333%;
     transition: transform 0.5s ease-in-out;
     padding: 0 1rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.poles-slider .pole-slide {
+    height: 100%;
 }
 
 .poles-slider .pole-card {
