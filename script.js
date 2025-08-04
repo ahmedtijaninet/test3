@@ -3,16 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     const contentToHide = document.querySelectorAll('.preloader-hidden');
 
-    if (preloader) {
+    if (preloader && !sessionStorage.getItem('selyn-preloader-shown')) {
         setTimeout(() => {
             preloader.classList.add('preloader-fade-out');
-            preloader.addEventListener('transitionend', () => {
+
+            // Wait for the fade-out animation to complete
+            setTimeout(() => {
                 preloader.classList.add('preloader-hidden');
                 contentToHide.forEach(el => {
                     el.classList.remove('preloader-hidden');
                 });
-            });
-        }, 5000); // 5 seconds
+                sessionStorage.setItem('selyn-preloader-shown', 'true');
+            }, 500); // Corresponds to the transition duration in CSS
+        }, 5000); // 5-second preloader display
+    } else if (preloader) {
+        // If preloader has been shown, hide it immediately and show content
+        preloader.style.display = 'none';
+        contentToHide.forEach(el => {
+            el.classList.remove('preloader-hidden');
+        });
     }
 
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
