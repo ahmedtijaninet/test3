@@ -198,7 +198,7 @@ section {
 .poles-slider {
     width: 100%;
     max-width: 900px;
-    margin-bottom: 2rem; /* Space between slider and H1 */
+    margin: 2rem 0;
     position: relative;
 }
 
@@ -227,13 +227,11 @@ section {
 
 .poles-slider .card-icon {
     font-size: 2.5rem;
-    /* color: var(--secondary-color); */ /* Let's use white for better contrast */
     color: white;
     margin-bottom: 1rem;
 }
 
 .poles-slider .pole-card h3 {
-    /* color: var(--primary-color); */
     color: white;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
