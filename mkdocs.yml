@@ -1,0 +1,69 @@
+site_name: My Awesome Project
+site_url: https://example.com/
+site_author: Your Name
+site_description: >-
+  A brief description of your project, which will be used for social cards
+  and search engine results.
+
+# Repository
+repo_name: your-username/your-repo
+repo_url: https://github.com/your-username/your-repo
+
+# Copyright
+copyright: Copyright &copy; 2024 Your Name
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light vs dark mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+# Navigation
+nav:
+  - Accueil: index.md
+  - 'Selyn Conseil': consulting.md
+  - 'Selyn Suite': suite.md
+  - 'Selyn Space': coworking.md
+  - 'Offres & Tarifs': offers.md
+  - Communauté: community.md
+  - 'À propos': about.md
+  - Contact: contact.md
+
+# Extra configuration for social cards
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/your-username
